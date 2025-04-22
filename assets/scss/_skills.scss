@@ -1,0 +1,118 @@
+#s-skills {
+  @include spacing-section;
+  background-color: $bg-main;
+
+  .grid-layout {
+    #skills {
+      @include flexbox-between;
+      height: auto;
+      padding: $gap-1;
+
+      div,
+      article {
+        width: 50%;
+
+        @include responsive-desktop {
+          width: 100%;
+        }
+      }
+
+      #skills-text {
+        min-height: 400px;
+
+        @include responsive-mobile {
+          min-height: auto;
+        }
+
+        h2 {
+          margin-bottom: $gap-4;
+          color: $color-white;
+
+          font: {
+            size: 3.2rem;
+            weight: 500;
+          }
+
+          span {
+            color: $color-main;
+          }
+        }
+
+        .changeDescription {
+          transition: 2s all ease;
+
+          @include responsive-mobile {
+            display: none;
+          }
+        }
+
+        p {
+          max-width: 500px;
+          line-height: 3.2rem;
+          color: $color-gray;
+
+          font: {
+            size: 1.8rem;
+          }
+        }
+      }
+
+      #skills-cards {
+        display: flex;
+        flex-wrap: wrap;
+        gap: $gap-3;
+
+        @include responsive-desktop {
+          margin-top: $gap-5;
+        }
+
+        article {
+          @include flexbox-between;
+          justify-content: center;
+          width: 20%;
+          flex-grow: 1;
+          height: 130px;
+          background-color: $bg-secondary;
+          position: relative;
+          border: 1px solid $bg-border;
+          border-radius: 4px;
+          transition: 1s all ease;
+
+          &:hover {
+            border: 1px solid #986dff;
+          }
+
+          @include responsive-mobile {
+            width: 40%;
+          }
+
+          /* Ocultando a descrição por padrão */
+          .skill-description {
+            visibility: hidden;  // Descrição oculta por padrão
+            opacity: 0;  // Totalmente invisível
+            position: absolute;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            max-width: 200px;
+            font-size: 14px;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            white-space: nowrap;
+            z-index: 10;
+            transition: opacity 0.3s ease, visibility 0s linear 0.3s;  // Transição suave
+          }
+
+          /* Exibe a descrição quando o mouse passa sobre o card */
+          &:hover .skill-description {
+            visibility: visible;  // Torna visível
+            opacity: 1;  // Torna totalmente visível
+            transition: opacity 0.3s ease, visibility 0s linear 0s;  // Transição suave
+          }
+        }
+      }
+    }
+  }
+}
