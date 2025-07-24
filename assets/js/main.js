@@ -39,6 +39,14 @@ document.addEventListener('DOMContentLoaded', () => {
     "Nov 2022 - Presente"
   );
 
+  hoverChangeExperience(
+     ".am",
+    `Atuei como suporte técnico realizando instalações de sistemas operacionais, manutenção de computadores e redes, além de auxiliar no desenvolvimento de sistemas e melhorias.`,
+    "Suporte Técnico",
+    "Andrade Maia Advogados",
+    "Mai 2025 - Atualmente"
+  )
+
   // Descrições para as tecnologias do seu projeto
 /*   hoverChangeDescription(
     ".html",
