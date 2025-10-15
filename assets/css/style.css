@@ -636,8 +636,11 @@ header .grid-layout nav .nav-list li a:hover {
 #s-projects .grid-layout #projects .steam {
   border: 1px solid #536fed;
 }
-#s-projects .grid-layout #projects .steam:hover {
-  border: 1px solid #536fed;
+#s-projects .grid-layout #projects .geradoram {
+  border: 1px solid #a6fb98;
+}
+#s-projects .grid-layout #projects .geradoram:hover {
+  border: 1px solid #a6fb98;
 }
 #s-projects .grid-layout #projects > article {
   height: auto;
